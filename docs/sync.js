@@ -293,53 +293,11 @@ class IncompatibleSyncedRealmError {
  */
 class User {
     /**
-     * Login a sync user with username and password.
-     * @param {string} server - authentication server
-     * @param {string} username
-     * @param {string} password
-     * @param {function(error, user)} [callback] - called with the following arguments:
-     *   - `error` - an Error object is provided on failure
-     *   - `user` - a valid User object on success
-     * @returns {void|Promise<User>} Returns a promise with a user if the callback was not specified
+     * TODO
+     * @param {*} server
+     * @param {*} credentials
      */
-    static login(server, username, password, callback) {}
-
-    /**
-     * Authenticate a sync user with provider.
-     * @param {string} server - authentication server
-     * @param {string} provider - the provider (curently: 'password', and 'jwt')
-     * @param {object} options - options used by provider:
-     *   - jwt - `token`; a JWT token
-     *   - password - `username` and `password`
-     * @return {Promise<User>} Returns a promise with a user
-     */
-    static authenticate(server, provider, options) {}
-
-    /**
-     * Register/login a sync user using an external login provider.
-     * @param {string} server - authentication server
-     * @param {object} options - options, containing the following:
-     * @param {string} options.provider - The provider type
-     * @param {string} options.providerToken - The access token for the given provider
-     * @param {object} [options.userInfo] - A map containing additional data required by the provider
-     * @param {function(error, User)} [callback] - an optional callback called with the following arguments:
-     *   - `error` - an Error object is provided on failure
-     *   - `user` - a valid User object on success
-     * @return {void|Promise<User>} Returns a promise with a user if the callback was not specified
-     */
-    static registerWithProvider(server, options, callback) {}
-
-    /**
-     * Register a sync user with username and password.
-     * @param {string} server - authentication server
-     * @param {string} username
-     * @param {string} password
-     * @param {function(error, user)} [callback] - called with the following arguments:
-     *   - `error` - an Error object is provided on failure
-     *   - `user` - a valid User object on success
-     * @return {void|Promise<User>} Returns a promise with a user if the callback was not specified
-     */
-    static register(server, username, password, callback) {}
+    static login(server, credentials) {}
 
     /**
      * Request a password reset email to be sent to a user's email.
